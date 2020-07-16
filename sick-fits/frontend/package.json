@@ -4,6 +4,7 @@
   "description": "Sick Fits! An example React, GraphQL, Next and Apollo",
   "main": "index.js",
   "scripts": {
+    "prettier-watch": "onchange \"**/*.js\" -- prettier --write {{changed}}",
     "dev": "next -p 7777",
     "build": "next build",
     "start": "next start",
@@ -43,9 +44,30 @@
     "babel-plugin-module-resolver": "^3.1.1",
     "casual": "^1.5.19",
     "enzyme-to-json": "^3.3.4",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-standard": "^4.0.1",
     "graphql-tools": "^4.0.0",
+    "husky": "^4.2.5",
     "jest": "^23.6.0",
-    "jest-transform-graphql": "^2.1.0"
+    "jest-transform-graphql": "^2.1.0",
+    "onchange": "^7.0.2",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
