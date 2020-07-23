@@ -8,6 +8,8 @@ const NavStyles = styled.ul`
   font-size: 2rem;
   a,
   button {
+    font-family: radnika_next;
+    color: ${(props) => props.theme.black};
     padding: 1rem 3rem;
     display: flex;
     align-items: center;
