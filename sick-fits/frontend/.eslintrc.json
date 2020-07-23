@@ -1,9 +1,16 @@
 {
   "env": {
     "browser": true,
-    "es2020": true
+    "es2020": true,
+    "node": true
   },
-  "extends": ["plugin:react/recommended", "airbnb"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/react"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -11,6 +18,12 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react"],
-  "rules": {}
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"]
+  }
 }
