@@ -1,10 +1,10 @@
 import React from "react";
 import { Query, Mutation } from "react-apollo";
 import gql from "graphql-tag";
+import PropTypes from "prop-types";
 import Error from "./ErrorMessage";
 import Table from "./styles/Table";
 import SickButton from "./styles/SickButton";
-import PropTypes from "prop-types";
 
 const possiblePermissions = [
   "ADMIN",

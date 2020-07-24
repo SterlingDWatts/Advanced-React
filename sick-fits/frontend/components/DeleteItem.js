@@ -21,6 +21,7 @@ class DeleteItem extends Component {
 
     cache.writeQuery({ query: ALL_ITEMS_QUERY, data });
   };
+
   render() {
     return (
       <Mutation
