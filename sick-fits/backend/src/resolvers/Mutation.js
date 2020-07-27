@@ -205,7 +205,6 @@ const Mutations = {
     });
 
     if (existingCartItem) {
-      console.log("This item is already in their cart");
       return ctx.db.mutation.updateCartItem(
         {
           where: { id: existingCartItem.id },
@@ -230,7 +229,6 @@ const Mutations = {
     );
   },
   async removeFromCart(parent, args, ctx, info) {
-    // find item
     const cartItem = await ctx.db.query.cartItem(
       {
         where: {
@@ -239,9 +237,9 @@ const Mutations = {
       },
       "{ id, user { id } }"
     );
-    // make sure we found an item
+
     if (!cartItem) throw new Error("No CartItem Found!");
-    // make sure they own it
+
     if (cartItem.user.id !== ctx.request.userId) {
       throw new Error("Cheatin huhhhh!");
     }
