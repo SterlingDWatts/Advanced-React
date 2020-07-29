@@ -32,18 +32,6 @@ const Composed = adopt({
   localState: ({ render }) => <Query query={LOCAL_STATE_QUERY}>{render}</Query>,
 });
 
-const LOCAL_STATE_QUERY = gql`
-  query LOCAL_STATE_QUERY {
-    cartOpen @client
-  }
-`;
-
-const TOGGLE_CART_MUTATION = gql`
-  mutation TOGGLE_CART_MUTATION {
-    toggleCart @client
-  }
-`;
-
 const Cart = () => (
   <Composed>
     {({ user, toggleCart, localState }) => {

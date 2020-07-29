@@ -9,7 +9,7 @@ exports[`CartCount Component matches the snapshot 1`] = `
     <CSSTransition
       className="count"
       classNames="count"
-      key="10"
+      key="11"
       timeout={
         Object {
           "enter": 400,
@@ -19,7 +19,7 @@ exports[`CartCount Component matches the snapshot 1`] = `
       unmountOnExit={true}
     >
       <CartCount__Dot>
-        10
+        11
       </CartCount__Dot>
     </CSSTransition>
   </TransitionGroup>
